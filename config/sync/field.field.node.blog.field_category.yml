@@ -1,0 +1,33 @@
+uuid: 85af9465-0473-46f2-ac7f-6d03048f28c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_category
+    - node.type.blog
+    - taxonomy.vocabulary.category
+  content:
+    - 'taxonomy_term:category:9b4619c3-0ac4-4264-b3a4-8eb7df438aaf'
+id: node.blog.field_category
+field_name: field_category
+entity_type: node
+bundle: blog
+label: Category
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: 9b4619c3-0ac4-4264-b3a4-8eb7df438aaf
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      category: category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

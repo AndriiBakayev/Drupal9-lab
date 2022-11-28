@@ -1,0 +1,33 @@
+uuid: 6cdb1d48-150f-48b0-97e9-cb93a416bc55
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.media_image_random
+  module:
+    - node
+    - views
+  theme:
+    - bakayev_theme
+id: bakayev_theme_views_block__media_image_random_block_1
+theme: bakayev_theme
+region: highlighted
+weight: 0
+provider: null
+plugin: 'views_block:media_image_random-block_1'
+settings:
+  id: 'views_block:media_image_random-block_1'
+  label: 'My today''s favorite picture'
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: 'My today''s favorite picture'
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      landing_page_hw4: landing_page_hw4

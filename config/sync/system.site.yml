@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: en
+uuid: 7f392a9f-1592-432e-aa1b-6d2fd7260da1
+name: 'Andrey Bakayev''s test'
+mail: andreybakayev@gmail.com
+slogan: 'Drupal site building hometasks'
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: ''

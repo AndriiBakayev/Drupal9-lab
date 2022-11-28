@@ -1,0 +1,195 @@
+uuid: 79dd46bd-34ab-43bb-8e7e-2fc894c7001c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.blog.body
+    - field.field.node.blog.field_blog_image
+    - field.field.node.blog.field_blog_tags
+    - field.field.node.blog.field_category
+    - image.style.thumbnail
+    - node.type.blog
+  module:
+    - image
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_fourcol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components:
+          b7a8359a-fdea-4b60-8ac9-b294f740c153:
+            uuid: b7a8359a-fdea-4b60-8ac9-b294f740c153
+            region: first
+            configuration:
+              id: 'field_block:node:blog:uid'
+              label: 'Authored by'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: visually_hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          c22520d5-0098-4656-8c05-7cebadfcd09b:
+            uuid: c22520d5-0098-4656-8c05-7cebadfcd09b
+            region: second
+            configuration:
+              id: 'field_block:node:blog:created'
+              label: 'Authored on'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: timestamp_ago
+                label: above
+                settings:
+                  future_format: '@interval hence'
+                  past_format: '@interval ago'
+                  granularity: 2
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          7e00f936-5789-4363-8164-c16a1da93ca1:
+            uuid: 7e00f936-5789-4363-8164-c16a1da93ca1
+            region: third
+            configuration:
+              id: 'field_block:node:blog:revision_uid'
+              label: 'Revision user'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: visually_hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          b98130f5-250c-4116-b09b-a9eb00626449:
+            uuid: b98130f5-250c-4116-b09b-a9eb00626449
+            region: fourth
+            configuration:
+              id: 'field_block:node:blog:revision_timestamp'
+              label: 'Revision create time'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: timestamp
+                label: visually_hidden
+                settings:
+                  date_format: short
+                  custom_date_format: ''
+                  timezone: ''
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 33-67
+        components:
+          a9f55451-770b-4199-9b6d-23eea0720a96:
+            uuid: a9f55451-770b-4199-9b6d-23eea0720a96
+            region: first
+            configuration:
+              id: 'field_block:node:blog:field_blog_image'
+              label: Image
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: visually_hidden
+                settings:
+                  image_link: content
+                  image_style: medium
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          93088e8c-b5d9-4e63-bbb0-a2471acd8f60:
+            uuid: 93088e8c-b5d9-4e63-bbb0-a2471acd8f60
+            region: second
+            configuration:
+              id: 'field_block:node:blog:body'
+              label: Description
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_trimmed
+                label: hidden
+                settings:
+                  trim_length: 200
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: node.blog.teaser
+targetEntityType: node
+bundle: blog
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_blog_image:
+    type: image
+    label: above
+    settings:
+      image_link: content
+      image_style: thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_blog_tags: true
+  field_category: true

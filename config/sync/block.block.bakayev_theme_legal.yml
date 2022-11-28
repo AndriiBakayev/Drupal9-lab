@@ -1,0 +1,37 @@
+uuid: 06fe41ec-308d-4be3-9ada-7376ced5d6f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.legal
+  module:
+    - system
+    - user
+  theme:
+    - bakayev_theme
+id: bakayev_theme_legal
+theme: bakayev_theme
+region: footer_bottom
+weight: 0
+provider: null
+plugin: 'system_menu_block:legal'
+settings:
+  id: 'system_menu_block:legal'
+  label: Legal
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous
+      authenticated: authenticated
+      administrator: administrator
+      content_editor: content_editor
+      content_publisher: content_publisher

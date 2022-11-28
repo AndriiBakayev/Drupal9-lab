@@ -1,0 +1,10 @@
+uuid: 3e3876ea-e7b2-4ef7-8005-af0d6399868e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.masonry
+label: masonry
+targetEntityType: node
+cache: true

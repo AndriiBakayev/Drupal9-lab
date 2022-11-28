@@ -1,0 +1,30 @@
+uuid: 2d4f9e78-2d3c-4193-94dc-bca5fee58000
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.privacy_policy.body
+    - node.type.privacy_policy
+  module:
+    - text
+    - user
+id: node.privacy_policy.teaser
+targetEntityType: node
+bundle: privacy_policy
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

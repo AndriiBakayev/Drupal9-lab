@@ -1,0 +1,28 @@
+uuid: b8a8a1f2-b5f6-4700-bdd0-ea58693088ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.privacy_policy.body
+    - node.type.privacy_policy
+  module:
+    - text
+    - user
+id: node.privacy_policy.default
+targetEntityType: node
+bundle: privacy_policy
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,23 @@
+uuid: 105a8cc5-e42d-46b8-bd8a-31494300c0b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.privacy_policy
+  module:
+    - text
+id: node.privacy_policy.body
+field_name: body
+entity_type: node
+bundle: privacy_policy
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

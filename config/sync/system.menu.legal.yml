@@ -1,0 +1,8 @@
+uuid: 0f5b90d6-714c-4cf7-bb13-62cf47a00533
+langcode: en
+status: true
+dependencies: {  }
+id: legal
+label: Legal
+description: 'Added Homework3'
+locked: false

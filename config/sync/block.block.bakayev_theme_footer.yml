@@ -1,0 +1,29 @@
+uuid: 9234ac59-de25-43b4-a8e3-52accdc979d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - bakayev_theme
+id: bakayev_theme_footer
+theme: bakayev_theme
+region: content_below
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Footer
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\nnode/5"

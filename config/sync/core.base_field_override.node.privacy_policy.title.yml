@@ -1,0 +1,18 @@
+uuid: 8e93daf4-a75c-47dd-9d87-677a75fffb8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.privacy_policy
+id: node.privacy_policy.title
+field_name: title
+entity_type: node
+bundle: privacy_policy
+label: 'Privacy policy'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

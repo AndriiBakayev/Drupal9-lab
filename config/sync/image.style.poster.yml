@@ -1,0 +1,15 @@
+uuid: e273d3ca-843b-46ae-9a3d-b4620b491032
+langcode: en
+status: true
+dependencies: {  }
+name: poster
+label: 'Poster (400x600)'
+effects:
+  184c8a50-ff72-462b-a231-79b75bfcd26d:
+    uuid: 184c8a50-ff72-462b-a231-79b75bfcd26d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 600
+      anchor: center-center

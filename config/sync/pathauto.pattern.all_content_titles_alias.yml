@@ -1,0 +1,14 @@
+uuid: 98a47ace-bd48-414f-8344-f59d0c1a98a8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: all_content_titles_alias
+label: 'All content titles alias'
+type: 'canonical_entities:node'
+pattern: '[node:nid]-[node:title]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

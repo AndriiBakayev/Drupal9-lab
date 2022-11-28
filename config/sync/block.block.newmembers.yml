@@ -1,0 +1,33 @@
+uuid: 12061c97-5df6-4bd5-b669-0b5e94934740
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c70048dd-5bee-4d4d-a141-06653dbe0597'
+  module:
+    - block_content
+    - user
+  theme:
+    - olivero
+id: newmembers
+theme: olivero
+region: sidebar
+weight: 0
+provider: null
+plugin: 'block_content:c70048dd-5bee-4d4d-a141-06653dbe0597'
+settings:
+  id: 'block_content:c70048dd-5bee-4d4d-a141-06653dbe0597'
+  label: 'New members'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous

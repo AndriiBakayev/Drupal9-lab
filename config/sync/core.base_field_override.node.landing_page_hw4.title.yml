@@ -1,0 +1,18 @@
+uuid: a09bcf0d-fddb-41d3-9711-5f4519c78c5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.landing_page_hw4
+id: node.landing_page_hw4.title
+field_name: title
+entity_type: node
+bundle: landing_page_hw4
+label: 'Landing page'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

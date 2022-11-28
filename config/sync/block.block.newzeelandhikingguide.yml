@@ -1,0 +1,50 @@
+uuid: acffa142-163b-4e15-9bd5-9f0911ad3bd4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:brochure_block_type:ee16f35c-6a31-42bc-9011-e8262907ca69'
+  module:
+    - block_content
+    - node
+    - system
+    - user
+  theme:
+    - olivero
+id: newzeelandhikingguide
+theme: olivero
+region: highlighted
+weight: 0
+provider: null
+plugin: 'block_content:ee16f35c-6a31-42bc-9011-e8262907ca69'
+settings:
+  id: 'block_content:ee16f35c-6a31-42bc-9011-e8262907ca69'
+  label: 'New Zeeland Hiking Guide'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/5
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous
+      authenticated: authenticated
+      administrator: administrator
+      content_editor: content_editor
+      content_publisher: content_publisher
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      about_us: about_us

@@ -1,0 +1,21 @@
+uuid: 76b868c3-e930-4400-ad80-7a01159f6291
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.brochure_block_type
+    - field.storage.block_content.field_brochure_media
+id: block_content.brochure_block_type.field_brochure_media
+field_name: field_brochure_media
+entity_type: block_content
+bundle: brochure_block_type
+label: 'Brochure media'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings: {  }
+field_type: entity_reference

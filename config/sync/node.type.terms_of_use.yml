@@ -1,0 +1,18 @@
+uuid: 95b19efa-0cf0-4ea1-98d2-223f555a5dd7
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Terms of use'
+type: terms_of_use
+description: 'Terms of use text'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

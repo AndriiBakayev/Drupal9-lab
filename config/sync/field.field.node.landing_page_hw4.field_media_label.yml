@@ -1,0 +1,29 @@
+uuid: c74ffae0-39bb-4085-adba-4c18cf5190d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media_label
+    - media.type.image
+    - node.type.landing_page_hw4
+id: node.landing_page_hw4.field_media_label
+field_name: field_media_label
+entity_type: node
+bundle: landing_page_hw4
+label: 'Media Image'
+description: 'Place media image here to publish'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: field_media_image.alt
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

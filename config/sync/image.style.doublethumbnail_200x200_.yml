@@ -1,0 +1,15 @@
+uuid: 3b1ad722-6c01-4da9-b685-27bc32e7a32d
+langcode: en
+status: true
+dependencies: {  }
+name: doublethumbnail_200x200_
+label: 'DoubleThumbnail (200x200)'
+effects:
+  7d10488a-e811-49db-a216-0a7cdc4a6ca7:
+    uuid: 7d10488a-e811-49db-a216-0a7cdc4a6ca7
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 200
+      height: 200
+      anchor: center-center

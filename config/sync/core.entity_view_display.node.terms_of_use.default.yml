@@ -1,0 +1,28 @@
+uuid: 8e3686c5-f614-45bf-b262-3c0accd82bc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.terms_of_use.body
+    - node.type.terms_of_use
+  module:
+    - text
+    - user
+id: node.terms_of_use.default
+targetEntityType: node
+bundle: terms_of_use
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

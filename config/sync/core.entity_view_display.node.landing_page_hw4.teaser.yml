@@ -1,0 +1,84 @@
+uuid: 86348668-2a85-47a3-9ecf-b3271930c789
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.landing_page_hw4.body
+    - field.field.node.landing_page_hw4.field_media_label
+    - node.type.landing_page_hw4
+  module:
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 75-25
+        components:
+          514780ec-6718-4e84-a611-e3a722cdb5b9:
+            uuid: 514780ec-6718-4e84-a611-e3a722cdb5b9
+            region: first
+            configuration:
+              id: 'field_block:node:landing_page_hw4:field_media_label'
+              label: 'Media Label'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: media_thumbnail
+                label: above
+                settings:
+                  image_link: content
+                  image_style: thumbnail
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          357ba648-2f56-446a-b639-45ee6ee2c76b:
+            uuid: 357ba648-2f56-446a-b639-45ee6ee2c76b
+            region: second
+            configuration:
+              id: 'field_block:node:landing_page_hw4:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_summary_or_trimmed
+                label: hidden
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: node.landing_page_hw4.teaser
+targetEntityType: node
+bundle: landing_page_hw4
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_media_label: true

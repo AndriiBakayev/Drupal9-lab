@@ -1,0 +1,23 @@
+uuid: b69e3622-8b81-417d-b387-f6ab70ae63a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.terms_of_use
+  module:
+    - text
+id: node.terms_of_use.body
+field_name: body
+entity_type: node
+bundle: terms_of_use
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary
