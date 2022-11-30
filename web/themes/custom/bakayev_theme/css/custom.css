@@ -1,0 +1,13 @@
+.site-footer__inner {
+  background-color: aqua;
+  padding-bottom: 1rem;
+}
+.site-footer {
+  background-color: aqua;
+  padding-bottom: 1rem;
+  background: none;
+}
+
+.sidebar {
+  grid-column: 11/14;
+}
