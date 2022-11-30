@@ -68,4 +68,9 @@ drupal.inst.history
 composer.lock
 .editorconfig
 .gitattributes
+inst.history
+/web/.csslintrc
+/web/.eslintignore
+/web/.eslintrc.json
+/web/.ht.router.php
 
