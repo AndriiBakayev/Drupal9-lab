@@ -1,4 +1,4 @@
-# Bakayev's hometask 7 Sub-theme of Olivero.
+# Bakayev's home task 7 Sub-theme of Olivero.
 # Adds messages "I am a ..." directly in templates of a page
 # Adds sidebar_top region under the sidebar
 # Applies custom formatting for footer by custom.css and
@@ -32,7 +32,7 @@ regions:
   footer_bottom: 'Footer Bottom'
 libraries:
   - bakayev_theme/global-styling
-php: 8.x
+php: 8.0
 modules:
   - drupal:views
 logo: logo.svg

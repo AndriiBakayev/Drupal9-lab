@@ -3,9 +3,8 @@
   padding-bottom: 1rem;
 }
 .site-footer {
-  background-color: aqua;
   padding-bottom: 1rem;
-  background: none;
+  background: aqua none;
 }
 
 .sidebar {

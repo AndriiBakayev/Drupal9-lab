@@ -6,17 +6,11 @@
 
   Drupal.behaviors.bakayevstheme_to_the_top = {
     attach: function (context, settings) {
-      var button_style = 'pill'
-      var button_animation = 'fade';
-
-      var button_text = "Наверх";
-      var button_animation_speed = 200;
-      var scroll_min_distance = 1000;
-      var scroll_speed = 300;
-
-      var element_name = 'scrollTopButton-pill';
-
-      var $element = $('<a/>', {
+      const button_text = "Наверх";
+      const button_animation_speed = 200;
+      const scroll_min_distance = 1000;
+      const scroll_speed = 300;
+      const $element = $('<a/>', {
         id: 'scrollTopButton-pill',
         href: '#',
         class: 'scroll-top-button'
@@ -26,10 +20,10 @@
         $element.appendTo('body');
       }
 
-      var animationIn = 'fadeIn';
-      var animationOut = 'fadeOut';
-      var animationSpeed = button_animation_speed;
-      var buttonVisible = false;
+      const animationIn = 'fadeIn';
+      const animationOut = 'fadeOut';
+      const animationSpeed = button_animation_speed;
+      let buttonVisible = false;
 
       $(window).scroll(function () {
         if ($(window).scrollTop() > scroll_min_distance) {
