@@ -22,7 +22,6 @@ dependencies:
     - content_moderation
     - contextual
     - file
-    - file_rename
     - filter
     - media
     - node
@@ -104,7 +103,6 @@ permissions:
   - 'edit terms in category'
   - 'edit terms in tags'
   - 'notify of path changes'
-  - 'rename files'
   - 'revert all revisions'
   - 'revert article revisions'
   - 'revert blog revisions'
