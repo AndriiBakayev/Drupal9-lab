@@ -18,6 +18,7 @@ dependencies:
     - taxonomy.vocabulary.tags
     - workflows.workflow.editorial
   module:
+    - bakayev
     - comment
     - content_moderation
     - contextual
@@ -100,6 +101,7 @@ permissions:
   - 'edit own page content'
   - 'edit own remote_video media'
   - 'edit own video media'
+  - 'edit person data'
   - 'edit terms in category'
   - 'edit terms in tags'
   - 'notify of path changes'
@@ -122,5 +124,6 @@ permissions:
   - 'view landing_page_hw4 revisions'
   - 'view own unpublished content'
   - 'view page revisions'
+  - 'view person data'
   - 'view the administration theme'
   - 'view update notifications'

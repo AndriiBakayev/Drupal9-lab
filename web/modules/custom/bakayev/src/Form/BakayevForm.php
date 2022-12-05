@@ -26,6 +26,8 @@ class BakayevForm extends FormBase {
     $form['name'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Name'),
+      '#size' => 30,
+      '#maxlength' => 50,
       '#description' => $this->t('Person name.'),
     ];
     $form['email'] = [
@@ -33,14 +35,14 @@ class BakayevForm extends FormBase {
       '#default_value' => 'vasya@aol.com',
       '#title' => $this->t('Email'),
       '#placeholder' => $this->t('Enter E-mail here'),
-      '#size' => 20,
+      '#size' => 30,
       '#maxlength' => 50,
       '#description' => $this->t('Person email.'),
     ];
     $form['age'] = [
       '#type' => 'number',
       '#title' => $this->t('Age'),
-      '#min' => 0,
+      '#min' => 1,
       '#max' => 100,
       '#default_value' => 30,
       '#description' => $this->t('Person age.'),
