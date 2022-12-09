@@ -57,7 +57,8 @@
         {# Gets fixed by JavaScript at wide widths. #}
         <div class="site-header__fixable" data-drupal-selector="site-header-fixable">
           <div class="site-header__initial">
-            <button class="sticky-header-toggle" data-drupal-selector="sticky-header-toggle" role="switch" aria-controls="site-header__inner" aria-label="{{ 'Sticky header'|t }}" aria-checked="false">
+            <button class="sticky-header-toggle" data-drupal-selector="sticky-header-toggle" role="switch"
+                    aria-controls="site-header__inner" aria-label="{{ 'Sticky header'|t }}" aria-checked="false">
               <span class="sticky-header-toggle__icon">
                 <span></span>
                 <span></span>
@@ -74,7 +75,8 @@
 
               {% if page.primary_menu or page.secondary_menu %}
                 <div class="mobile-buttons" data-drupal-selector="mobile-buttons">
-                  <button class="mobile-nav-button" data-drupal-selector="mobile-nav-button" aria-label="{{ 'Main Menu'|t }}" aria-controls="header-nav" aria-expanded="false">
+                  <button class="mobile-nav-button" data-drupal-selector="mobile-nav-button"
+                          aria-label="{{ 'Main Menu'|t }}" aria-controls="header-nav" aria-expanded="false">
                     <span class="mobile-nav-button__label">{{ 'Menu'|t }}</span>
                     <span class="mobile-nav-button__icon"></span>
                   </button>
@@ -104,14 +106,14 @@
             {{ page.highlighted }}
 
 
-            {% if page.sidebar %}
+            {% if page.sidebar or page.sidebar_top %}
               <div class="sidebar-grid grid-full">
                 <main role="main" class="site-main ie11-autorow">
                   {{ page.content_above }}
                   {{ page.content }}
                 </main>
                 <div class="sidebar">
-                  {{ page.sidebar_top}}
+                  {{ page.sidebar_top }}
                   {{ page.sidebar }}
                 </div>
               </div>
