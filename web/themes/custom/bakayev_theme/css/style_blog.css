@@ -1,0 +1,12 @@
+body {
+  color: #142614;
+  font-size: smaller;
+}
+.masonry-item {
+  background-color: #ec7d7d;
+  border-color: #302736;
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px;
+  border-radius: 10px;
+}
