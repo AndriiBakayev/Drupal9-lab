@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * Main module file with hooks.
+ */
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function footer_roles_preprocess_page(&$variables): void {
+  {
+  $userRoles = \Drupal::currentUser()->getRoles();
+  $userRolesClass = implode(' ', $userRoles);
+  $variables['page']['footer_top'][] = [
+    '#theme' => 'footer_roles_custom_theme',
+    '#cache' => [
+      'context' => ['user.roles'],
+      'max-age' => 300,
+      'tags' => ['user'],
+    ],
+    '#roles' => $userRoles,
+    '#prefix' => "<div class=\"$userRolesClass\">",
+    '#suffix' => "</div>",
+  ];
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function footer_roles_theme($existing, $type, $theme, $path): array {
+  return [
+    'footer_roles_custom_theme' => [
+      'variables' => [
+        'roles' => [],
+      ],
+    ],
+  ];
+}
