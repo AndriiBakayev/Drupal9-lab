@@ -1,0 +1,125 @@
+<?php
+
+use Drupal\Core\Database\Database;
+
+/**
+ * Implements hook_install().
+ */
+function student_registration_install($is_syncing): void {
+
+}
+
+/**
+ * Implements hook_uninstall().
+ *
+ * Make backup copy of students_registration table if it exists
+ * before it dropped by hook schema
+ */
+function student_registration_uninstall(): void {
+  if (Database::getConnection()
+    ->schema()
+    ->tableExists('student_registration')) {
+    $backup_table_name = 'student_registration_backup_uninstall_' . date('d_M_Y_H_i_s');
+    Database::getConnection()
+      ->schema()->renameTable('student_registration', $backup_table_name);
+    \Drupal::messenger()
+      ->addMessage(t("Student Registration uninstall. Students table moved to backup " . $backup_table_name));
+  }
+}
+
+/**
+ * Implements hook_schema().
+ *
+ * register table student_registration to automatically create via schema
+ */
+
+function student_registration_schema(): array {
+  $schema['student_registration'] = [
+    'description' => 'Stores module student_registration data for each student.',
+    'fields' => [
+      's_id' => [
+        'description' => 'ID of student.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'student_name' => [
+        'description' => t('Student Name'),
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => TRUE,
+      ],
+      'student_rollno' => [
+        'description' => t('Student Enrollment Number'),
+        'type' => 'varchar',
+        'length' => 10,
+        'not null' => TRUE,
+      ],
+      'student_mail' => [
+        'description' => t('Student Email'),
+        'type' => 'varchar',
+        'length' => 50,
+        'not null' => TRUE,
+      ],
+      'student_phone' => [
+        'description' => t('Student Phone'),
+        'type' => 'varchar',
+        'length' => 13,
+        'not null' => TRUE,
+      ],
+      'student_dob' => [
+        'description' => t('Student Date Of Birth'),
+        'type' => 'varchar',
+        'mysql_type' => 'date',
+        'not null' => TRUE,
+      ],
+      'student_gender' => [
+        'description' => t('Student gender Male/Female/Other'),
+        'type' => 'varchar',
+        'length' => 6,
+        'not null' => TRUE,
+      ],
+      //Average mark  added in 9001 version
+      'average_mark' => [
+        'type' => 'decimal',
+        'description' => t("Average Mark"),
+        'precision' => 5,
+        'scale' => 2,
+        'not null' => TRUE,
+        'default' => 85.6,
+      ],
+    ],
+    'primary key' => [
+      's_id',
+    ],
+  ];
+  return $schema;
+}
+
+/**
+ * Implements hook_update_N().
+ */
+function student_registration_update_9001() {
+  $average_mark = [
+    'type' => 'numeric',
+    'description' => t("Average Mark"),
+    'precision' => 5,
+    'scale' => 2,
+    'not null' => TRUE,
+    'default' => 0,
+  ];
+  $schema = Database::getConnection()->schema();
+  $schema->addField('student_registration', 'average_mark', $average_mark);
+}
+
+
+/**
+ * Implements hook_update_N().
+ */
+function student_registration_update_9003(&$sandbox) {
+  $database = \Drupal::database();
+  $query = $database->update('student_registration')
+    ->condition('average_mark', 0)
+    ->fields(['average_mark' => 85.2,])
+    ->execute();
+}
