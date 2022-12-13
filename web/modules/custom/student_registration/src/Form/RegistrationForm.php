@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\student_registration\Form\RegistrationForm.
- */
-
 namespace Drupal\student_registration\Form;
 
 use Drupal\Component\Utility\EmailValidator;
@@ -14,22 +9,28 @@ use Drupal\Core\Form\FormStateInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
+/**
+ * Class supplies registration/edit of studets.
+ */
 class RegistrationForm extends FormBase {
 
   /**
-   * Database connection
+   * Database connection.
    *
    * @var \Drupal\Core\Database\Connection
    */
   protected $database;
 
   /**
-   * Email validator
+   * Email validator.
    *
    * @var \Drupal\Component\Utility\EmailValidator
    */
   protected $emailValidator;
 
+  /**
+   * Asks container to supply Database and Email Validator for class via DI.
+   */
   public static function create(ContainerInterface $container) {
     return new static(
       $container->get('database'),
@@ -37,7 +38,9 @@ class RegistrationForm extends FormBase {
     );
   }
 
-
+  /**
+   * Constructor connects to database and gets Email Validator.
+   */
   public function __construct(Connection $database, EmailValidator $emailValidator) {
     $this->database = $database;
     $this->emailValidator = $emailValidator;
@@ -53,7 +56,6 @@ class RegistrationForm extends FormBase {
   /**
    * Supply form fields.
    */
-  //  public function buildForm(array $form, FormStateInterface $form_state) {
   public function buildForm(array $form, FormStateInterface $form_state, $s_id = NULL) {
 
     if ($s_id) {
@@ -180,8 +182,7 @@ class RegistrationForm extends FormBase {
   /**
    * Submits form into messenger.
    */
-  public
-  function submitForm(array &$form, FormStateInterface $form_state) {
+  public function submitForm(array &$form, FormStateInterface $form_state) {
     $formData = $form_state->getValues();
     $s_id = $formData['s_id'];
     unset($formData['s_id']);

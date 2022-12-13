@@ -1,12 +1,5 @@
 <?php
 
-/**
- * @file
- * Display students info in table format
- * Functionality of this Controller is wired to Drupal in
- *   student_registration.routing.yml
- */
-
 namespace Drupal\student_registration\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
@@ -15,27 +8,39 @@ use Drupal\Core\Link;
 use Drupal\Core\Url;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
+/**
+ * Shows all records in table form with Viev/Edit/Delete links.
+ */
 class TableController extends ControllerBase {
 
   /**
-   * Database connection
+   * Database connection.
    *
    * @var \Drupal\Core\Database\Connection
    */
   protected $database;
 
+  /**
+   * Constructor with database connection.
+   */
   public function __construct(Connection $database) {
     $this->database = $database;
   }
 
+  /**
+   * Dependency Injection to get database.
+   */
   public static function create(ContainerInterface $container) {
     return new static(
       $container->get('database')
     );
   }
 
+  /**
+   * Shows records.
+   */
   public function display() {
-    //create table header
+    // Create table header.
     $header_table = [
       'rollno' => t('Rollno'),
       'name' => t('Name'),
@@ -44,7 +49,7 @@ class TableController extends ControllerBase {
       'deletelink' => t('Delete'),
     ];
 
-    //select data from db
+    // Select data from db.
     $query = $this->database->select('student_registration', 'sr')
       ->fields('sr', ['s_id', 'student_name', 'student_rollno']);
     $rows = [];
@@ -54,17 +59,17 @@ class TableController extends ControllerBase {
       $delete = Url::fromUserInput('/registration/' . $row->s_id . '/delete');
       $edit = Url::fromUserInput('/registration/' . $row->s_id . '/edit');
 
-      //print the data from table
+      // Print the data from table.
       $rows[] = [
         'rollno' => $row->student_rollno,
         'name' => $row->student_name,
-        Link::fromTextAndUrl(t('View'), $view),
-        Link::fromTextAndUrl(t('Edit'), $edit),
-        Link::fromTextAndUrl(t('Delete'), $delete),
+        'view' => Link::fromTextAndUrl(t('View'), $view),
+        'edit' => Link::fromTextAndUrl(t('Edit'), $edit),
+        'delete' => Link::fromTextAndUrl(t('Delete'), $delete),
       ];
     }
 
-    //display data
+    // Display data.
     $form['table'] = [
       '#type' => 'table',
       '#header' => $header_table,

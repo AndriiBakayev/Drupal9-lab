@@ -1,11 +1,5 @@
 <?php
 
-/**
- * @file
- * Form for confirmation student delete
- * This form is wired to Drupal in registration_students.routing.yml
- */
-
 namespace Drupal\student_registration\Form;
 
 use Drupal\Core\Database\Connection;
@@ -15,26 +9,35 @@ use Drupal\Core\Url;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
+/**
+ * Form for confirm student deletion.
+ */
 class ConfirmDeleteForm extends ConfirmFormBase {
 
   /**
-   * Student id
+   * Student id.
    *
-   * @var integer
+   * @var int
    */
-  public $s_id;
+  public $sId;
 
   /**
-   * Database connection
+   * Database connection.
    *
    * @var \Drupal\Core\Database\Connection
    */
   protected $database;
 
+  /**
+   * Constructor for database connect.
+   */
   public function __construct(Connection $database) {
     $this->database = $database;
   }
 
+  /**
+   * Asks container to supply database via Dependency Injection.
+   */
   public static function create(ContainerInterface $container) {
     return new static(
       $container->get('database')
@@ -48,10 +51,16 @@ class ConfirmDeleteForm extends ConfirmFormBase {
     return 'student_registration.delete_form';
   }
 
+  /**
+   * {@inheritdoc}
+   */
   public function getQuestion() {
     return t('Do you want to delete student?');
   }
 
+  /**
+   * {@inheritdoc}
+   */
   public function getCancelUrl() {
     return new Url('student_registration.registrations');
   }
@@ -74,40 +83,33 @@ class ConfirmDeleteForm extends ConfirmFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state, $s_id = NULL) {
-    $this->s_id = $s_id;
+    $this->sId = $s_id;
     $query = $this->database->select('student_registration', 'sr')
       ->fields('sr', ['s_id', 'student_name', 'student_mail', 'student_rollno'])
       ->condition('s_id', $s_id)
       ->execute();
     $data = $query->fetch();
-    if (!$data) {//If not exists go to table
+    // If not exists go to table.
+    if (!$data) {
       (new RedirectResponse('/registrations'))->send();
       \Drupal::messenger()
         ->addMessage(t('Student with id = %s_id not found!',
-          ['%s_id' => $this->s_id]), 'error');
+          ['%s_id' => $this->sId]), 'error');
       exit(1);
     }
     $form['student_name'] = [
       '#type' => 'label',
-      '#title' => t('Student Name: ' . $data->student_name),
+      '#title' => t('Student Name: %name', ['%name' => $data->student_name]),
     ];
     $form['student_email'] = [
       '#type' => 'label',
-      '#title' => t('Student Mail: ' . $data->student_mail),
+      '#title' => t('Student Mail: %mail', ['%mail' => $data->student_mail]),
     ];
     $form['student_rollno'] = [
       '#type' => 'label',
-      '#title' => t('Student RollNo: ' . $data->student_rollno),
+      '#title' => t('Student RollNo: %rollno', ['%rollno' => $data->student_rollno]),
     ];
     return parent::buildForm($form, $form_state);
-  }
-
-
-  /**
-   * {@inheritdoc}
-   */
-  public function validateForm(array &$form, FormStateInterface $form_state) {
-    parent::validateForm($form, $form_state);
   }
 
   /**
@@ -115,7 +117,7 @@ class ConfirmDeleteForm extends ConfirmFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $this->database->delete('student_registration')
-      ->condition('s_id', $this->s_id, '=')
+      ->condition('s_id', $this->sId, '=')
       ->execute();
     \Drupal::messenger()->addMessage(t("succesfully deleted"));
     $form_state->setRedirect('/registrations');

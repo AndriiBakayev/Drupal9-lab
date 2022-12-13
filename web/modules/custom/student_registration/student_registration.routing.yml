@@ -37,4 +37,3 @@ student_registration.edit:
     _title: 'Edit student'
   requirements:
     _permission: 'registration student'
-
