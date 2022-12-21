@@ -1,0 +1,4 @@
+name: Ajax Form Submit
+type: module
+description: Demonstrates ajax submit.
+core_version_requirement: ^8.8 || ^9

@@ -1,0 +1,38 @@
+# Bakayev's home task 7 Sub-theme of Olivero.
+# Adds messages "I am a ..." directly in templates of a page
+# Adds sidebar_top region under the sidebar
+# Applies custom formatting for footer by custom.css and
+# applies sidebar_top formatting patch for sidebar grid while two sidebars used
+# Formats blogs on the /blogs page and formats it into a brick-like style
+# Adds custom "Наверх" button by scroll.top.button.js and scroll.top.button.css
+# Applies print styles by print.css
+name: "Andrii Bakayev's custom theme"
+type: theme
+base theme: olivero
+description: "Andrii Bakayev's theme."
+alt text: 'Branch of Olivero, Drupal front-end theme.'
+package: Core
+core_version_requirement: 8.x|9.x|10
+screenshot: bakayev_screenshot.png
+regions:
+  header: Header
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  hero: 'Hero (full width)'
+  highlighted: Highlighted
+  breadcrumb: Breadcrumb
+  breadcrumb2: Breadcrumb2
+  social: Social Bar
+  content_above: Content Above
+  content: Content
+  sidebar_top: 'Sidebar top'
+  sidebar: 'Sidebar'
+  content_below: 'Content Below'
+  footer_top: 'Footer Top'
+  footer_bottom: 'Footer Bottom'
+libraries:
+  - bakayev_theme/global-styling
+php: 8.0
+modules:
+  - drupal:views
+logo: logo.svg
