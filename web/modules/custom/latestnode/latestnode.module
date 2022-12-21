@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Defines lastestnode hook for theme.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function latestnode_theme($existing, $type, $theme, $path) {
+  return [
+    'latestnode_latestnodes' => [
+      'variables' => ['latestnodes' => NULL],
+    ],
+  ];
+}

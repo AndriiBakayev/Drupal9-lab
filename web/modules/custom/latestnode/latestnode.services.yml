@@ -1,0 +1,3 @@
+services:
+  latestnode.latestNodesService:
+    class: Drupal\latestnode\Form\LatestNodesService
