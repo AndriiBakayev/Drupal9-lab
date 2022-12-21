@@ -1,7 +1,40 @@
-student_registration.form:
-  path: '/student-registration'
+student_registration.view:
+  path: '/registration/{s_id}'
+  defaults:
+    _controller: '\Drupal\student_registration\Controller\ViewController::display'
+    _title: 'Student'
+  requirements:
+    _permission: 'registration student'
+
+student_registration.registrations:
+  path: '/registrations'
+  defaults:
+    _controller: '\Drupal\student_registration\Controller\TableController::display'
+    _title: 'Students'
+  requirements:
+    _permission: 'registration student'
+
+student_registration.create:
+  path: '/registration'
   defaults:
     _form: '\Drupal\student_registration\Form\RegistrationForm'
-    _title: 'Student Registration Form'
+    _title: 'Registration of new student'
+  requirements:
+    _permission: 'registration student'
+
+student_registration.delete:
+  path: 'registration/{s_id}/delete'
+  defaults:
+    _form: '\Drupal\student_registration\Form\ConfirmDeleteForm'
+    _title: 'Delete student'
+  requirements:
+    _permission: 'registration student'
+
+student_registration.edit:
+  path: 'registration/{s_id}/edit'
+  defaults:
+    _form: '\Drupal\student_registration\Form\RegistrationForm'
+    _title: 'Edit student'
+
   requirements:
     _permission: 'registration student'
