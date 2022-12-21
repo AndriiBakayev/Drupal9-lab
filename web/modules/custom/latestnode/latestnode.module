@@ -12,7 +12,6 @@ function latestnode_theme($existing, $type, $theme, $path) {
   return [
     'latestnode_latestnodes' => [
       'variables' => ['latestnodes' => NULL],
-
     ],
     'latestnode_latestnodes_block' => [
       'variables' => ['latestnodes' => NULL],

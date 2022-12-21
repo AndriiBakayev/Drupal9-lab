@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Attach libraries.
+ *
+ * Attach libraries on /blog and /blogs page only.
+ */
+
+/**
+ * Implements hook_preprocess_page().
+ *
+ * Analyses url and content type of page and
+ * attaches libraries only on blog uri or content type blog.
+ */
+function bakayev_theme_preprocess_page(&$variables): void {
+  $uri = \Drupal::request()->getRequestUri();
+  $node = \Drupal::request()->attributes->get('node');
+  $typeName = isset($node) ? $node->bundle() : 'n/a';
+  if (str_contains($uri, 'blog') || str_contains($typeName, 'blog')) {
+    $variables['#attached']['library'][] = 'bakayev_theme/style_blog';
+    $variables['#attached']['library'][] = 'bakayev_theme/masonry';
+    $variables['#attached']['library'][] = 'olivero/sidebar';
+  }
+}

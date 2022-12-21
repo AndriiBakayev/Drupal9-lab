@@ -1,0 +1,15 @@
+mymodule.latestNode:
+  path: '/latest-node'
+  defaults:
+    _controller: '\Drupal\latestnode\Controller\LatestNodesController::nodesList'
+    _title: 'Latest Nodes via entityQuery'
+  requirements:
+    _permission: 'access content'
+
+mymodule.latestNodeService:
+  path: '/latest-node-service'
+  defaults:
+    _controller: '\Drupal\latestnode\Controller\LatestNodesControllerService::nodesListService'
+    _title: 'Latest Nodes via Service'
+  requirements:
+    _permission: 'access content'

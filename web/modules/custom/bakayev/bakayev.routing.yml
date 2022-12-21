@@ -1,0 +1,23 @@
+bakayev.param:
+  path: '/person/{name}/{email}/{age}'
+  defaults:
+    _controller: '\Drupal\bakayev\Controller\BakayevControllerParam::content'
+    _title: "View person controller"
+  requirements:
+    _permission: 'view person data'
+  options:
+    parameters:
+      user:
+        type: entity:user
+
+bakayev.form:
+  path: '/person/edit'
+  defaults:
+    _form: '\Drupal\bakayev\Form\BakayevForm'
+    _title: "Edit person form"
+  requirements:
+    _permission: 'edit person data'
+  options:
+    parameters:
+      user:
+        type: entity:user
