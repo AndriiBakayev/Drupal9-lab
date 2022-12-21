@@ -1,0 +1,8 @@
+name: Student
+description: Andrey Bakayev Student module
+package: Custom 
+type: module
+core_version_requirement: ^8.8.0 || ^9 || ^10
+# dependencies:
+#   - drupal:views
+#   - drupal:node

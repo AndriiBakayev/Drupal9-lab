@@ -1,0 +1,3 @@
+registration student:
+  title: 'Registration student'
+  restrict access: true
