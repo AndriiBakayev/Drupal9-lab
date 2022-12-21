@@ -1,3 +1,4 @@
 services:
   latestnode.latestNodesService:
     class: Drupal\latestnode\Form\LatestNodesService
+    arguments: ['@entity_type.manager', '@config.factory']

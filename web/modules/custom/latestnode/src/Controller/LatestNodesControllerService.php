@@ -29,7 +29,7 @@ class LatestNodesControllerService extends ControllerBase implements ContainerIn
    */
   public static function create(ContainerInterface $container) {
     return new static(
-      $container->get('latestnode.latestNodesService')
+      $container->get('latestnode.latestNodesService'),
     );
   }
 
