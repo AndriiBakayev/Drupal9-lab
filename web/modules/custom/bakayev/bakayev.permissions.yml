@@ -1,0 +1,9 @@
+view person data:
+  description: "View personal data of bakayev form"
+  title: "View person controller"
+  restrict access: true
+
+edit person data:
+  description: "Edit personal data of bakayev form"
+  title: "Edit person form"
+  restrict access: true
