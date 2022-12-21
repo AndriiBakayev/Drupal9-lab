@@ -58,9 +58,15 @@ class BakayevForm extends FormBase {
    * Redirects on submit action.
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $path = '/person/' . $this->t($form["name"]["#value"])
-      . '/' . $this->t($form["email"]["#value"])
-      . '/' . $this->t($form["age"]["#value"]);
+    $path = t(
+      '/:person/:name/:email/:age', [
+        ':person' => 'person', //Avoid 'person' translation
+        ':name' => $form["name"]["#value"],
+        ':email' => $form["email"]["#value"],
+        ':age' => $form["age"]["#value"],
+      ]
+    );
+
     $path_param = [];
     $url = Url::fromUserInput($path, ['query' => $path_param]);
     $form_state->setRedirectUrl($url);
