@@ -77,14 +77,14 @@ function student_registration_schema(): array {
         'not null' => TRUE,
       ],
       // Average mark  added in 9001 version.
-      'average_mark' => [
-        'type' => 'decimal',
-        'description' => ("Average Mark"),
-        'precision' => 5,
-        'scale' => 2,
-        'not null' => TRUE,
-        'default' => 85.6,
-      ],
+//      'average_mark' => [
+//        'type' => 'decimal',
+//        'description' => ("Average Mark"),
+//        'precision' => 5,
+//        'scale' => 2,
+//        'not null' => TRUE,
+//        'default' => 85.60,
+//      ],
     ],
     'primary key' => [
       's_id',
