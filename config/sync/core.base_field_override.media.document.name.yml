@@ -1,0 +1,20 @@
+uuid: 189fc81a-9fb9-423f-bd5e-47014dc3629f
+langcode: ru
+status: true
+dependencies:
+  config:
+    - media.type.document
+id: media.document.name
+field_name: name
+entity_type: media
+bundle: document
+label: Название
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

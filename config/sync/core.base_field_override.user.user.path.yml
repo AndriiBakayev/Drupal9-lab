@@ -1,0 +1,19 @@
+uuid: 8a6364bc-af8d-47e3-b133-bf9f6c5d64ae
+langcode: ru
+status: true
+dependencies:
+  module:
+    - path
+    - user
+id: user.user.path
+field_name: path
+entity_type: user
+bundle: user
+label: 'Синоним URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

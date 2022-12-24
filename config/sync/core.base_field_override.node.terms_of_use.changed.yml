@@ -1,0 +1,18 @@
+uuid: fb3e8791-c665-4c6a-98f5-b3aa17ea68a0
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.terms_of_use
+id: node.terms_of_use.changed
+field_name: changed
+entity_type: node
+bundle: terms_of_use
+label: Изменение
+description: 'Время последнего редактирования материала.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,12 @@
+display:
+  default:
+    display_options:
+      title: Блоги
+      exposed_form:
+        options:
+          submit_button: Применить
+          reset_button_label: Сбросить
+          exposed_sorts_label: 'Сорт по'
+          sort_asc_label: Возр
+          sort_desc_label: Убыв
+      use_more_text: ещё

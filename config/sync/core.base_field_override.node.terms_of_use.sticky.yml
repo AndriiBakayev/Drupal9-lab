@@ -1,0 +1,22 @@
+uuid: c2494e5a-2981-4893-8509-02725aeddbcd
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.terms_of_use
+id: node.terms_of_use.sticky
+field_name: sticky
+entity_type: node
+bundle: terms_of_use
+label: 'Закреплять вверху списков'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Вкл
+  off_label: Выкл
+field_type: boolean

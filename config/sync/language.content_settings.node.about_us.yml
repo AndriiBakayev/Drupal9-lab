@@ -1,0 +1,18 @@
+uuid: 62b6fa85-5e72-4b62-a530-f88ee02e1c42
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.about_us
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.about_us
+target_entity_type_id: node
+target_bundle: about_us
+default_langcode: site_default
+language_alterable: true

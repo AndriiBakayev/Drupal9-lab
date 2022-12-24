@@ -1,0 +1,18 @@
+uuid: 82572933-4ad3-49a5-b5df-46d1befb85f1
+langcode: ru
+status: true
+dependencies:
+  config:
+    - media.type.document
+id: media.document.changed
+field_name: changed
+entity_type: media
+bundle: document
+label: Изменение
+description: 'Время последнего редактирования элемента медиа.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

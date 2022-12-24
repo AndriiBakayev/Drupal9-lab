@@ -1,0 +1,22 @@
+uuid: 0c41e60f-794c-4bf9-99b1-5d7527a35d42
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.privacy_policy
+id: node.privacy_policy.status
+field_name: status
+entity_type: node
+bundle: privacy_policy
+label: Опубликовано
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Вкл
+  off_label: Выкл
+field_type: boolean

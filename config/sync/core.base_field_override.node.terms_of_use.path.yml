@@ -1,0 +1,20 @@
+uuid: 2c1dc67c-9e44-4c22-bc96-b4a382f1b681
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.terms_of_use
+  module:
+    - path
+id: node.terms_of_use.path
+field_name: path
+entity_type: node
+bundle: terms_of_use
+label: 'Синоним URL'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

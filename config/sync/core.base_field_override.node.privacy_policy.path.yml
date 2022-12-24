@@ -1,0 +1,20 @@
+uuid: f6c996dd-2354-4cde-8d75-b879ace7f01b
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.privacy_policy
+  module:
+    - path
+id: node.privacy_policy.path
+field_name: path
+entity_type: node
+bundle: privacy_policy
+label: 'Синоним URL'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

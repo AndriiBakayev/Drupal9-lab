@@ -1,0 +1,18 @@
+uuid: b2393630-0666-49ed-99a3-f98b97f11bc9
+langcode: ru
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.category
+id: taxonomy_term.category.name
+field_name: name
+entity_type: taxonomy_term
+bundle: category
+label: Название
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

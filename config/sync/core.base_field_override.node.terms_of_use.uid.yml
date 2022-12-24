@@ -1,0 +1,20 @@
+uuid: 1ce830bd-b5c6-4952-83b6-47060cde4ee2
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.terms_of_use
+id: node.terms_of_use.uid
+field_name: uid
+entity_type: node
+bundle: terms_of_use
+label: Автор
+description: 'Имя пользователя автора содержимого.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

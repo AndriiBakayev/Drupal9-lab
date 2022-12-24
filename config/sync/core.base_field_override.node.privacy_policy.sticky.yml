@@ -1,0 +1,22 @@
+uuid: ac1c9c96-0154-4c50-bd2f-e92db587bd2d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.privacy_policy
+id: node.privacy_policy.sticky
+field_name: sticky
+entity_type: node
+bundle: privacy_policy
+label: 'Закреплять вверху списков'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Вкл
+  off_label: Выкл
+field_type: boolean

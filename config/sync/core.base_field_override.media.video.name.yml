@@ -1,0 +1,20 @@
+uuid: 35a8427a-3a71-4434-a46a-8ebc9d4bcf7e
+langcode: ru
+status: true
+dependencies:
+  config:
+    - media.type.video
+id: media.video.name
+field_name: name
+entity_type: media
+bundle: video
+label: Название
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

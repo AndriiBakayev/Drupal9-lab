@@ -13,7 +13,7 @@ bundle: landing_page_hw4
 label: 'Media Image'
 description: 'Place media image here to publish'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

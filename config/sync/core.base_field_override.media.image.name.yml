@@ -1,0 +1,20 @@
+uuid: dd3fc316-afb4-4907-9906-258be6a8a2da
+langcode: ru
+status: true
+dependencies:
+  config:
+    - media.type.image
+id: media.image.name
+field_name: name
+entity_type: media
+bundle: image
+label: Название
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

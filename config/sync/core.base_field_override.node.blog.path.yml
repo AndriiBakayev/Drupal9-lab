@@ -1,0 +1,20 @@
+uuid: b9dca042-b001-42f9-a5de-56e2188f6cb8
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.blog
+  module:
+    - path
+id: node.blog.path
+field_name: path
+entity_type: node
+bundle: blog
+label: 'Синоним URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path
