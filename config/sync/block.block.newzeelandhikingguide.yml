@@ -40,7 +40,6 @@ visibility:
       authenticated: authenticated
       administrator: administrator
       content_editor: content_editor
-      content_publisher: content_publisher
   'entity_bundle:node':
     id: 'entity_bundle:node'
     negate: false

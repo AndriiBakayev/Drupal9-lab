@@ -1,0 +1,22 @@
+uuid: 691656d8-5a09-4d1b-ace6-471d58dc9b55
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.landing_page_hw4
+id: node.landing_page_hw4.promote
+field_name: promote
+entity_type: node
+bundle: landing_page_hw4
+label: 'Помещено на главную страницу'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Вкл
+  off_label: Выкл
+field_type: boolean

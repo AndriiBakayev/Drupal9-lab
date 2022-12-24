@@ -1,0 +1,20 @@
+uuid: aba98365-cfef-45bb-bdb9-32e181543c27
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.privacy_policy
+id: node.privacy_policy.uid
+field_name: uid
+entity_type: node
+bundle: privacy_policy
+label: Автор
+description: 'Имя пользователя автора содержимого.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

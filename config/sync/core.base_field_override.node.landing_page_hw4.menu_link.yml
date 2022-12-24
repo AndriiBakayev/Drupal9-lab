@@ -1,0 +1,20 @@
+uuid: f4d9cd84-0a0a-4cdd-866f-feeacaea9d73
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.landing_page_hw4
+id: node.landing_page_hw4.menu_link
+field_name: menu_link
+entity_type: node
+bundle: landing_page_hw4
+label: 'Ссылка меню'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

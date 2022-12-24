@@ -1,0 +1,18 @@
+uuid: b2272b2e-8eae-4a69-b299-09fb584e6b88
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.terms_of_use
+id: node.terms_of_use.created
+field_name: created
+entity_type: node
+bundle: terms_of_use
+label: 'Создан в'
+description: 'Время создания материала.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

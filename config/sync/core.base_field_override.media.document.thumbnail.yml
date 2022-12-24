@@ -1,0 +1,37 @@
+uuid: dcc1a4a1-61da-4498-8a02-f1c9cc665881
+langcode: ru
+status: true
+dependencies:
+  config:
+    - media.type.document
+  module:
+    - image
+id: media.document.thumbnail
+field_name: thumbnail
+entity_type: media
+bundle: document
+label: Миниатюра
+description: 'Миниатюра медиа файла.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

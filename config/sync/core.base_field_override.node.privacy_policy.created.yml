@@ -1,0 +1,18 @@
+uuid: 00e2250b-967b-4cb4-b3e5-b6f538268857
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.privacy_policy
+id: node.privacy_policy.created
+field_name: created
+entity_type: node
+bundle: privacy_policy
+label: 'Создан в'
+description: 'Время создания материала.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

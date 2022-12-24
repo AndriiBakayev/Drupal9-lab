@@ -1,0 +1,18 @@
+uuid: e8f663ca-1bf9-414b-8b98-c53b18edecc6
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.about_us
+id: node.about_us.changed
+field_name: changed
+entity_type: node
+bundle: about_us
+label: Изменение
+description: 'Время последнего редактирования материала.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

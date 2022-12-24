@@ -1,0 +1,18 @@
+uuid: 1512e4ee-e4bc-4e43-b847-5374881f19c0
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.landing_page_hw4
+id: node.landing_page_hw4.created
+field_name: created
+entity_type: node
+bundle: landing_page_hw4
+label: 'Создан в'
+description: 'Время создания материала.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

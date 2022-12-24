@@ -1,0 +1,18 @@
+uuid: 4f765e6c-38cb-4348-9cc2-31d7e7e3aabe
+langcode: ru
+status: true
+dependencies:
+  config:
+    - media.type.audio
+id: media.audio.changed
+field_name: changed
+entity_type: media
+bundle: audio
+label: Изменение
+description: 'Время последнего редактирования элемента медиа.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

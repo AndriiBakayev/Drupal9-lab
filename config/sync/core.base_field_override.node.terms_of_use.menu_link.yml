@@ -1,0 +1,20 @@
+uuid: 26b420ab-3d58-4ac3-bcdc-414787b2c649
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.terms_of_use
+id: node.terms_of_use.menu_link
+field_name: menu_link
+entity_type: node
+bundle: terms_of_use
+label: 'Ссылка меню'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

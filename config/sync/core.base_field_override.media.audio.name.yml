@@ -1,0 +1,20 @@
+uuid: 34bb086f-142c-4413-801b-f56f3b70b91e
+langcode: ru
+status: true
+dependencies:
+  config:
+    - media.type.audio
+id: media.audio.name
+field_name: name
+entity_type: media
+bundle: audio
+label: Название
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

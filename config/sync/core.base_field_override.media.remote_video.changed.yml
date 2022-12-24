@@ -1,0 +1,18 @@
+uuid: 2b14a69b-8e4f-47e6-a7fc-75be45a9e9b2
+langcode: ru
+status: true
+dependencies:
+  config:
+    - media.type.remote_video
+id: media.remote_video.changed
+field_name: changed
+entity_type: media
+bundle: remote_video
+label: Изменение
+description: 'Время последнего редактирования элемента медиа.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

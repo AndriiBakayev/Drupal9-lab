@@ -1,0 +1,22 @@
+uuid: 3205c754-c17d-4f8a-ae04-702619980dc7
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.about_us
+id: node.about_us.status
+field_name: status
+entity_type: node
+bundle: about_us
+label: Опубликовано
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Вкл
+  off_label: Выкл
+field_type: boolean
