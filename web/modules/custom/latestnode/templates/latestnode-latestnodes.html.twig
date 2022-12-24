@@ -1,0 +1,9 @@
+{# latestnode-latestnodes.html.twig #}
+<H2>Latest nodes:</H2>
+<div id="related_links">
+  <ul>
+    {% for node in latestnodes %}
+      {{ node.teaser }}
+    {% endfor %}
+  </ul>
+</div>
