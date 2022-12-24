@@ -17,6 +17,7 @@ dependencies:
     - taxonomy.vocabulary.tags
     - workflows.workflow.editorial
   module:
+    - bakayev
     - comment
     - content_moderation
     - contextual
@@ -87,4 +88,5 @@ permissions:
   - 'use text format restricted_html'
   - 'view all revisions'
   - 'view own unpublished content'
+  - 'view person data'
   - 'view the administration theme'
