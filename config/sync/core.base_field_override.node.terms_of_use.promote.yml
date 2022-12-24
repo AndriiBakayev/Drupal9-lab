@@ -1,0 +1,22 @@
+uuid: 47c339d8-77fc-4583-90c8-7d32b7dbc9e6
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.terms_of_use
+id: node.terms_of_use.promote
+field_name: promote
+entity_type: node
+bundle: terms_of_use
+label: 'Помещено на главную страницу'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Вкл
+  off_label: Выкл
+field_type: boolean

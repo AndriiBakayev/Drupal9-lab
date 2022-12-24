@@ -1,0 +1,18 @@
+uuid: ce2990eb-175d-48e1-843e-55f2ea2ff3d7
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.terms_of_use
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.terms_of_use
+target_entity_type_id: node
+target_bundle: terms_of_use
+default_langcode: site_default
+language_alterable: true

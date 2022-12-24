@@ -1,0 +1,20 @@
+uuid: beac173f-9aba-4cf5-9b87-170d92321dc2
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.about_us
+id: node.about_us.menu_link
+field_name: menu_link
+entity_type: node
+bundle: about_us
+label: 'Ссылка меню'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,18 @@
+uuid: 372903fb-3be7-4fb5-8351-ed8921b0548d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.brochure_block_type
+id: block_content.brochure_block_type.changed
+field_name: changed
+entity_type: block_content
+bundle: brochure_block_type
+label: Изменение
+description: 'Время, когда пользовательский блок был последний раз отредактирован.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

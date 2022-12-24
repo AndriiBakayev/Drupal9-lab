@@ -1,0 +1,18 @@
+uuid: 44aaaa0f-7035-4e15-b9de-d2499663e758
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.privacy_policy
+id: node.privacy_policy.changed
+field_name: changed
+entity_type: node
+bundle: privacy_policy
+label: Изменение
+description: 'Время последнего редактирования материала.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

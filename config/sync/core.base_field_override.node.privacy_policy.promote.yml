@@ -1,0 +1,22 @@
+uuid: 5102c1e6-fc56-411b-b0c8-9ce097a5bc96
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.privacy_policy
+id: node.privacy_policy.promote
+field_name: promote
+entity_type: node
+bundle: privacy_policy
+label: 'Помещено на главную страницу'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Вкл
+  off_label: Выкл
+field_type: boolean

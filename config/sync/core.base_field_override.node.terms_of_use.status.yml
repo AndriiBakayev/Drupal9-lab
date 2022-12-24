@@ -1,0 +1,22 @@
+uuid: b7ade1a6-2226-4a2e-8bff-f9bcc06a15d9
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.terms_of_use
+id: node.terms_of_use.status
+field_name: status
+entity_type: node
+bundle: terms_of_use
+label: Опубликовано
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Вкл
+  off_label: Выкл
+field_type: boolean

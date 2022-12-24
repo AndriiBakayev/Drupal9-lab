@@ -1,0 +1,20 @@
+uuid: dad5cb55-e4d7-44c3-92ee-459026034887
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.privacy_policy
+id: node.privacy_policy.menu_link
+field_name: menu_link
+entity_type: node
+bundle: privacy_policy
+label: 'Ссылка меню'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

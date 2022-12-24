@@ -1,0 +1,20 @@
+uuid: 8c788578-4f4e-4481-b855-b42542ceb3c5
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.landing_page_hw4
+  module:
+    - path
+id: node.landing_page_hw4.path
+field_name: path
+entity_type: node
+bundle: landing_page_hw4
+label: 'Синоним URL'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

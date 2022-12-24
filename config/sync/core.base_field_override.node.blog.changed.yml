@@ -1,0 +1,18 @@
+uuid: 33430f69-ae85-4e55-9e1c-6d9c9d4bd136
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.blog
+id: node.blog.changed
+field_name: changed
+entity_type: node
+bundle: blog
+label: Изменение
+description: 'Время последнего редактирования материала.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

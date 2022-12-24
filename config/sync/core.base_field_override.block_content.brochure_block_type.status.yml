@@ -1,0 +1,22 @@
+uuid: f6c8c144-fcd4-4f49-a171-7edd3fc992b7
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.brochure_block_type
+id: block_content.brochure_block_type.status
+field_name: status
+entity_type: block_content
+bundle: brochure_block_type
+label: Опубликовано
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Вкл
+  off_label: Выкл
+field_type: boolean

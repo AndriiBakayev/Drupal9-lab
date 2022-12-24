@@ -1,0 +1,20 @@
+uuid: 1bbd1ffd-a67e-4ad6-803e-184c5f361af1
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.blog
+id: node.blog.menu_link
+field_name: menu_link
+entity_type: node
+bundle: blog
+label: 'Ссылка меню'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference
