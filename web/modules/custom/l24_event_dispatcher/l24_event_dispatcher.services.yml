@@ -1,0 +1,5 @@
+services:
+  l24_event_dispatcher.param1test_event_subscriber:
+    class: Drupal\l24_event_dispatcher\Param1TestEventSubscriber
+    tags:
+      - { name: event_subscriber }
