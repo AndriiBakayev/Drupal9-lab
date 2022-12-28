@@ -2,7 +2,16 @@
 <div id="related_links">
   <ul>
     {% for node in latestnodes %}
-      <li>{{ node.url }}</li>
+      {% if node.url %}
+        <li>{{ node.url }}</li>
+      {% endif %}
     {% endfor %}
+
   </ul>
+  {% for node in latestnodes %}
+    {% if node.info %}
+      {{ node.info }}<br>
+    {% endif %}
+  {% endfor %}
+
 </div>
