@@ -1,0 +1,21 @@
+uuid: 380daab7-2014-4804-82fb-394b63a1b216
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - l27_rest_api
+    - serialization
+id: data_rest_resource
+plugin_id: data_rest_resource
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+    - DELETE
+    - PATCH
+  formats:
+    - json
+  authentication:
+    - basic_auth

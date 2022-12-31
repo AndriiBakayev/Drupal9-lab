@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
+    - field.field.node.article.field_unique_url
     - image.style.thumbnail
     - node.type.article
   module:
@@ -62,6 +63,14 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_unique_url:
+    type: string_textfield
+    weight: 121
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 2
@@ -109,6 +118,11 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete

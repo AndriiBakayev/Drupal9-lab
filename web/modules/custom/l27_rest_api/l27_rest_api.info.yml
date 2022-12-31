@@ -1,0 +1,5 @@
+name: Lab27 Rest Api test l27
+description: Demonstrates REST API resource plugin GET and POST methods
+package: Custom
+type: module
+core_version_requirement: ^8.8.0 || ^9 || ^10

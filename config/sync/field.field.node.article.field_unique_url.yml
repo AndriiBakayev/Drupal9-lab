@@ -1,0 +1,19 @@
+uuid: baa6371f-8e96-452e-8f4b-3c7655b7442b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_unique_url
+    - node.type.article
+id: node.article.field_unique_url
+field_name: field_unique_url
+entity_type: node
+bundle: article
+label: unique_url
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
