@@ -1,0 +1,483 @@
+{
+	"info": {
+		"_postman_id": "8ea7c5b1-11c1-4754-b28a-9999ff3e9daf",
+		"name": "Drupal9",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24889003"
+	},
+	"item": [
+		{
+			"name": "https://drupal9.ddev.site/jsonapi/user/user/b4e0b2fd-6f6d-456c-80e6-9a5ba810f6df",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://drupal9.ddev.site/jsonapi/user/user/b4e0b2fd-6f6d-456c-80e6-9a5ba810f6df"
+			},
+			"response": []
+		},
+		{
+			"name": "https://drupal9.ddev.site/api/getrest1?_format=json",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true,
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Vasya123",
+						"username": "admin"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.api+json",
+						"type": "text"
+					},
+					{
+						"key": "_format",
+						"value": "json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": {\n        \"value\": \"abc@drupaljournal.com\"\n    },\n    \"message\": {\n        \"value\": \"Test email custom body\"\n    },\n    \"subject\": {\n        \"value\": \"Test Email\"\n    },\n    \"lang\": {\n        \"value\": \"en\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://drupal9.ddev.site/api/getrest1?_format=json",
+					"protocol": "https",
+					"host": [
+						"drupal9",
+						"ddev",
+						"site"
+					],
+					"path": [
+						"api",
+						"getrest1"
+					],
+					"query": [
+						{
+							"key": "_format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://drupal9.ddev.site/api/v1/email",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true,
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Vasya123",
+						"username": "admin"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "_format",
+						"value": "json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": {\n        \"value\": \"abc@drupaljournal.com\"\n    },\n    \"message\": {\n        \"value\": \"Test email custom body\"\n    },\n    \"subject\": {\n        \"value\": \"Test Email\"\n    },\n    \"lang\": {\n        \"value\": \"en\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://drupal9.ddev.site/api/v1/email"
+			},
+			"response": []
+		},
+		{
+			"name": "https://drupal9.ddev.site/api/get",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true,
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Vasya123",
+						"username": "admin"
+					}
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "_format",
+						"value": "json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": {\n        \"value\": \"abc@drupaljournal.com\"\n    },\n    \"message\": {\n        \"value\": \"Test email custom body\"\n    },\n    \"subject\": {\n        \"value\": \"Test Email\"\n    },\n    \"lang\": {\n        \"value\": \"en\"\n    },\n    \"data\": {\n        \"value\": \"21\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://drupal9.ddev.site/api/get"
+			},
+			"response": []
+		},
+		{
+			"name": "https://drupal9.ddev.site/api/get",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true,
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Vasya123",
+						"username": "admin"
+					}
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "_format",
+						"value": "json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": {\n        \"value\": \"abc@drupaljournal.com\"\n    },\n    \"message\": {\n        \"value\": \"Test email custom body\"\n    },\n    \"subject\": {\n        \"value\": \"Test Email\"\n    },\n    \"lang\": {\n        \"value\": \"en\"\n    },\n    \"data\": {\n        \"value\": \"21\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://drupal9.ddev.site/api/get"
+			},
+			"response": []
+		},
+		{
+			"name": "Create new article",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true,
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Vasya123",
+						"username": "admin"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "_format",
+						"value": "json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": {\n        \"value\": \"REST_generated_Article3\"\n    },\n    \"body\": {\n        \"value\": \"REST_generated_Article body\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://drupal9.ddev.site/api/post"
+			},
+			"response": []
+		},
+		{
+			"name": "Send email via post",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true,
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Vasya123",
+						"username": "admin"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "_format",
+						"value": "json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": {\n        \"value\": \"abc@drupaljournal.com\"\n    },\n    \"message\": {\n        \"value\": \"Test email custom body\"\n    },\n    \"subject\": {\n        \"value\": \"Test Email\"\n    },\n    \"lang\": {\n        \"value\": \"en\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://drupal9.ddev.site/api/post"
+			},
+			"response": []
+		},
+		{
+			"name": "Get one last blog https://drupal9.ddev.site/jsonapi/node/blog?limit=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://drupal9.ddev.site/jsonapi/node/blog?limit=1",
+					"protocol": "https",
+					"host": [
+						"drupal9",
+						"ddev",
+						"site"
+					],
+					"path": [
+						"jsonapi",
+						"node",
+						"blog"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JSONAPI get one blog https://drupal9.ddev.site/en/jsonapi/node/blog/4b93ac25-8ee6-47d3-901c-ce215d42c697",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Vasya123",
+						"username": "admin"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://drupal9.ddev.site/en/jsonapi/node/blog/4b93ac25-8ee6-47d3-901c-ce215d42c697"
+			},
+			"response": []
+		},
+		{
+			"name": "JSONAPI modify article https://drupal9.ddev.site/jsonapi/node/article/dc6e3bbd-522c-4320-a58b-8e1d6042ca55",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Vasya123",
+						"username": "admin"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.api+json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"type\": \"node--article\",\n        \"attributes\": {\n            \"title\": \"JSONAPI_created_Article\",\n            \"body\": {\n                \"value\": \"JSONAPI_created_Article body\",\n                \"format\": \"plain_text\",\n                \"summary\": null\n            }\n        }\n    }\n}"
+				},
+				"url": "https://drupal9.ddev.site/jsonapi/node/article/"
+			},
+			"response": []
+		},
+		{
+			"name": "JSONAPI Create article POST https://drupal9.ddev.site/jsonapi/node/article/",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Vasya123",
+						"username": "admin"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.api+json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"type\": \"node--article\",\n        \"attributes\": {\n            \"title\": \"JSONAPI_created_Article\",\n            \"body\": {\n                \"value\": \"JSONAPI_created_Article body\",\n                \"format\": \"plain_text\",\n                \"summary\": null\n            }\n        }\n    }\n}"
+				},
+				"url": "https://drupal9.ddev.site/jsonapi/node/article/"
+			},
+			"response": []
+		},
+		{
+			"name": "JSONAPI Delete article Delete",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Vasya123",
+						"username": "admin"
+					}
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.api+json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"type\": \"node--article\",\n        \"attributes\": {\n            \"title\": \"JSONAPI_created_Article\",\n            \"body\": {\n                \"value\": \"JSONAPI_created_Article body\",\n                \"format\": \"plain_text\",\n                \"summary\": null\n            }\n        }\n    }\n}"
+				},
+				"url": "https://drupal9.ddev.site/jsonapi/node/article/7c8adbef-9efd-4158-bfbf-aeb7b8395d03"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": {
+			"password": "Vasya123",
+			"username": "admin"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
