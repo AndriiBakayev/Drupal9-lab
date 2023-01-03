@@ -35,5 +35,6 @@ student_registration.edit:
   defaults:
     _form: '\Drupal\student_registration\Form\RegistrationForm'
     _title: 'Edit student'
+
   requirements:
     _permission: 'registration student'

@@ -47,6 +47,7 @@ class RegistrationForm extends FormBase {
   }
 
   /**
+
    * Gets formId.
    */
   public function getFormId() {
@@ -56,6 +57,7 @@ class RegistrationForm extends FormBase {
   /**
    * Supply form fields.
    */
+
   public function buildForm(array $form, FormStateInterface $form_state, $s_id = NULL) {
 
     if ($s_id) {
@@ -69,6 +71,7 @@ class RegistrationForm extends FormBase {
       '#type' => 'hidden',
       '#value' => ($s_id) ? $s_id : '',
     ];
+
     $form['student_name'] = [
       '#type' => 'textfield',
       '#title' => t('Enter Name:'),
@@ -80,11 +83,13 @@ class RegistrationForm extends FormBase {
       '#title' => t('Enter Enrollment Number:'),
       '#required' => TRUE,
       '#default_value' => ($s_id && isset($data->student_rollno)) ? $data->student_rollno : '',
+
     ];
     $form['student_mail'] = [
       '#type' => 'email',
       '#title' => t('Enter Email ID:'),
       '#required' => TRUE,
+
       '#default_value' => ($s_id && isset($data->student_mail)) ? $data->student_mail : '',
     ];
     $form['student_phone'] = [
@@ -96,6 +101,7 @@ class RegistrationForm extends FormBase {
       '#type' => 'date',
       '#title' => t('Enter DOB:'),
       '#required' => TRUE,
+
       '#default_value' => ($s_id && isset($data->student_dob)) ? date('Y-m-d', strtotime($data->student_dob)) : '2000-01-01',
     ];
     $form['student_gender'] = [
@@ -176,6 +182,7 @@ class RegistrationForm extends FormBase {
         $form_state->setErrorByName('average_mark', $this->t('Не льстите ему!'));
       }
     }
+
 
   }
 
