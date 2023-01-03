@@ -1,0 +1,60 @@
+id: l28_migration_node
+label: Lab28 Migrate_api migration node from CSV
+#migration_tags:
+#  - l28 Migrate CSV
+source:
+  plugin: 'csv'
+  # Full path to the file.
+  path: 'modules/custom/l28_migration/source/node_source.csv'
+  ids:
+    - id
+  # Column delimiter. Comma (,) by default.
+  delimiter: ','
+  # Field enclosure. Double quotation marks (") by default.
+  enclosure: '"'
+  # Here we identify the columns of interest in the source file.
+  # Each numeric key is the 0-based index of the column.
+  # For each column, the key below is the field name assigned to
+  # the data on import, to be used in field mappings below.
+  # The label value is a user-friendly string for display by the
+  # migration UI.
+  constants:
+    type: blog
+  track_changes: true
+process:
+  title: title
+  body: text
+
+  field_category:
+    - plugin: skip_on_empty
+      method: process
+      source: category
+    - plugin: explode
+      delimiter: ','
+    - plugin: callback
+      callable: trim
+    - plugin: entity_generate
+      entity_type: taxonomy_term
+      bundle: category
+      value_key: name
+      bundle_key: vid
+      ignore_case: true
+
+  field_blog_tags:
+    - plugin: skip_on_empty
+      method: process
+      source: tags
+    - plugin: explode
+      delimiter: '|'
+    - plugin: callback
+      callable: trim
+    - plugin: entity_generate
+      entity_type: taxonomy_term
+      bundle: tags
+      value_key: name
+      bundle_key: vid
+      ignore_case: true
+
+destination:
+  plugin: entity:node
+  default_bundle: blog
