@@ -47,6 +47,7 @@ class RegistrationForm extends FormBase {
   }
 
   /**
+
    * Gets formId.
    */
   public function getFormId() {
@@ -56,6 +57,7 @@ class RegistrationForm extends FormBase {
   /**
    * Supply form fields.
    */
+
   public function buildForm(array $form, FormStateInterface $form_state, $s_id = NULL) {
 
     if ($s_id) {
@@ -180,6 +182,7 @@ class RegistrationForm extends FormBase {
         $form_state->setErrorByName('average_mark', $this->t('Не льстите ему!'));
       }
     }
+
 
   }
 
