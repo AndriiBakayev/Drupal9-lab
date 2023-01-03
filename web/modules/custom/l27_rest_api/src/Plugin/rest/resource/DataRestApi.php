@@ -287,7 +287,7 @@ class DataRestApi extends ResourceBase {
    */
   public function patch($data) {
 
-    return new ResourceResponse('Patch not fully realised. $data=' . print_r($data,true), 400);
+    return new ResourceResponse('Patch not fully realised. $data=' . print_r($data, TRUE), 400);
 
   }
 
