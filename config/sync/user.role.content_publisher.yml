@@ -18,7 +18,6 @@ dependencies:
     - taxonomy.vocabulary.tags
     - workflows.workflow.editorial
   module:
-    - bakayev
     - comment
     - content_moderation
     - contextual
@@ -28,7 +27,6 @@ dependencies:
     - node
     - path
     - pathauto
-    - search
     - shortcut
     - system
     - taxonomy

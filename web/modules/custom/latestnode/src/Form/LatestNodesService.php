@@ -8,7 +8,6 @@ use Drupal\Core\Config\ConfigFactory;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
-
 /**
  * Service returns 5 last created nodes.
  */
@@ -20,7 +19,6 @@ class LatestNodesService extends ControllerBase {
    * @var \Drupal\Core\Entity\EntityTypeManagerInterface
    */
   protected EntityTypeManagerInterface $entity;
-
 
   /**
    * Constructor.
@@ -42,8 +40,7 @@ class LatestNodesService extends ControllerBase {
   }
 
   /**
-   * Returns last 5 created nodes with images in a teaser viewmode.
-
+   * Returns last 5 created nodes with images in a teaser viewmode.   *
    */
   public function teaserEntityList() {
     $query = \Drupal::entityQuery('node');
@@ -85,6 +82,5 @@ class LatestNodesService extends ControllerBase {
     }
     return $nodesLoaded;
   }
-
 
 }
