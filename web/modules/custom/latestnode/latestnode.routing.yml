@@ -1,4 +1,4 @@
-latestnode.latestNode:
+mymodule.latestNode:
   path: '/latest-node'
   defaults:
     _controller: '\Drupal\latestnode\Controller\LatestNodesController::nodesList'
@@ -6,18 +6,10 @@ latestnode.latestNode:
   requirements:
     _permission: 'access content'
 
-latestnode.latestNodeService:
+mymodule.latestNodeService:
   path: '/latest-node-service'
   defaults:
     _controller: '\Drupal\latestnode\Controller\LatestNodesControllerService::nodesListService'
     _title: 'Latest Nodes via Service'
-  requirements:
-    _permission: 'access content'
-
-latestnode.settings:
-  path: '/latest-node-settings'
-  defaults:
-    _form: '\Drupal\latestnode\Form\LatestNodeConfigForm'
-    _title: 'Latest Nodes Config'
   requirements:
     _permission: 'access content'

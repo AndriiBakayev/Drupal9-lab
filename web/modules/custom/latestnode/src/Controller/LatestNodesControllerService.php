@@ -37,7 +37,7 @@ class LatestNodesControllerService extends ControllerBase implements ContainerIn
    * Connects template and outputs nodes in teaser format.
    */
   public function nodesListService() {
-    $latestnodes = $this->latestNodesService->teaserConfigEntityList();
+    $latestnodes = $this->latestNodesService->teaserEntityList();
     return [
       '#theme' => 'latestnode_latestnodes',
       '#latestnodes' => $latestnodes,
