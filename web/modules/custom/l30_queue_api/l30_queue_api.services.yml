@@ -1,0 +1,5 @@
+# queue_worker_examples.services.yml
+services:
+  logger.channel.audit_log:
+    parent: logger.channel_base
+    arguments: [ 'audit_log' ]

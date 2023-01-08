@@ -1,0 +1,7 @@
+l30_queue_api.batch:
+  path: '/admin/renew_nodes_title_dates'
+  defaults:
+    _title: 'Update all nodes of type for add (replace) given date in title'
+    _form: '\Drupal\l30_queue_api\Form\BatchForm'
+  requirements:
+    _permission: 'administer site configuration'
