@@ -120,7 +120,7 @@ class ConfirmDeleteForm extends ConfirmFormBase {
       ->condition('s_id', $this->sId, '=')
       ->execute();
     \Drupal::messenger()->addMessage(t("succesfully deleted"));
-    $form_state->setRedirect('/registrations');
+    $form_state->setRedirect('student_registration.registrations');
   }
 
 }
