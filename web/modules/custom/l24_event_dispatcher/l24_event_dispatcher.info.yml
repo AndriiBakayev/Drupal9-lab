@@ -1,0 +1,5 @@
+name: Lab24 event dispatcher subscriber
+description: Subsctibes to core event and adds param1=test param to URL
+package: Custom
+type: module
+core_version_requirement: ^8.8.0 || ^9 || ^10

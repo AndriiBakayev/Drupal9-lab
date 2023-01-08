@@ -1,0 +1,20 @@
+uuid: 9d00d7a6-1d3a-4fce-a294-bd5e081d88a5
+langcode: en
+status: false
+dependencies:
+  module:
+    - basic_auth
+    - l27_rest_api
+    - serialization
+    - user
+id: custom_rest_endpoint_post
+plugin_id: custom_rest_endpoint_post
+granularity: resource
+configuration:
+  methods:
+    - POST
+  formats:
+    - json
+  authentication:
+    - basic_auth
+    - cookie

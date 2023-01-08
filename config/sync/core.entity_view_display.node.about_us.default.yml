@@ -5,9 +5,11 @@ dependencies:
   config:
     - field.field.node.about_us.body
     - field.field.node.about_us.field_about_us
+    - field.field.node.about_us.field_color_of_dreams
     - node.type.about_us
   module:
     - image
+    - l25_field_api
     - text
     - user
 id: node.about_us.default
@@ -32,6 +34,13 @@ content:
         attribute: lazy
     third_party_settings: {  }
     weight: 102
+    region: content
+  field_color_of_dreams:
+    type: rgb_item_default_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
     region: content
   links:
     settings: {  }

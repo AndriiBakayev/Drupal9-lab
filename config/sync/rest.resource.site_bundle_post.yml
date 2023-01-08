@@ -1,0 +1,19 @@
+uuid: 452fdbd4-748e-4a28-9b6c-28e1ae8c93e7
+langcode: en
+status: false
+dependencies:
+  module:
+    - basic_auth
+    - l27_rest_api
+    - serialization
+    - user
+id: site_bundle_post
+plugin_id: site_bundle_post
+granularity: method
+configuration:
+  POST:
+    supported_formats:
+      - json
+    supported_auth:
+      - basic_auth
+      - cookie

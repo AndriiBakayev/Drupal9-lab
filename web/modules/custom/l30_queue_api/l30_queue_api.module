@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks.
+ */
+
+use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Access\AccessResult;
+
+/**
+ * Implements hook_entity_access().
+ *
+ * Creates queue entry for audit.log.
+ */
+function l30_queue_api_entity_access(EntityInterface $entity, $operation, AccountInterface $account) {
+  $job = [
+    'user' => $account->getAccountName(),
+    'uid' => $account->id(),
+    'entity' => $entity->getEntityTypeId() . ':' . $entity->bundle() . ':' . $entity->id(),
+    'op' => $operation,
+    'timestamp' => Drupal::time()->getCurrentTime(),
+  ];
+
+  Drupal::queue('audit_log')->createItem($job);
+
+  return AccessResult::neutral();
+}
