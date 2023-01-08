@@ -60,7 +60,8 @@ class BakayevForm extends FormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $path = t(
       '/:person/:name/:email/:age', [
-        ':person' => 'person', //Avoid 'person' translation
+    // Avoid 'person' translation.
+        ':person' => 'person',
         ':name' => $form["name"]["#value"],
         ':email' => $form["email"]["#value"],
         ':age' => $form["age"]["#value"],
