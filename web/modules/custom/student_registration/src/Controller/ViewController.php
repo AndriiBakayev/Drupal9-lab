@@ -46,23 +46,23 @@ class ViewController extends ControllerBase {
       throw new NotFoundHttpException();
     }
     $rows = [
-      ['label' => t('Name: %student_name', ['student_name' => $result->student_name])],
+      ['label' => t('Name: :student_name', [':student_name' => $result->student_name])],
       [
         'label' => t(
-          'Enrollment Number: %student_rollno',
-          ['student_rollno' => $result->student_rollno]
+          'Enrollment Number: :student_rollno',
+          [':student_rollno' => $result->student_rollno]
         ),
       ],
-      ['label' => t('Email: %student_mail', ['%student_mail' => $result->student_mail])],
-      ['label' => t('Contact Number: %student_phone', ['student_phone' => $result->student_phone])],
-      ['label' => t('Date of Birth: %student_dob', ['student_dob' => date('Y-m-d', strtotime($result->student_dob))])],
-      ['label' => t('Gender: %student_gender', ['student_gender' => $result->student_gender])],
+      ['label' => t('Email: :student_mail', [':student_mail' => $result->student_mail])],
+      ['label' => t('Contact Number: :student_phone', [':student_phone' => $result->student_phone])],
+      ['label' => t('Date of Birth: :student_dob', [':student_dob' => date('Y-m-d', strtotime($result->student_dob))])],
+      ['label' => t('Gender: :student_gender', [':student_gender' => $result->student_gender])],
     ];
     if (isset($result->average_mark)) {
       $rows[] =
         [
-          'label' => t('Average Mark: %student_average_mark',
-          ['student_average_mark' => $result->average_mark]),
+          'label' => t('Average Mark: :student_average_mark',
+          [':student_average_mark' => $result->average_mark]),
         ];
     }
 
