@@ -56,6 +56,10 @@ class RGBItemDefaultWidget extends WidgetBase {
    * Validates if value is integer 0<X<255.
    */
   public static function validateColor($element, FormStateInterface $form_state) {
+    // Allow empty values;.
+    if (!$element['#value']) {
+      return;
+    }
     if ($element['#value'] == -1) {
       $form_state->setValueForElement($element, '');
       return;
