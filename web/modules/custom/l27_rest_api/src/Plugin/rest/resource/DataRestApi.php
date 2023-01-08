@@ -192,7 +192,7 @@ class DataRestApi extends ResourceBase {
       throw new AccessDeniedHttpException();
     }
     $vid = 'tags';
-    $terms = $this->entityTypeManager()
+    $terms = $this->entityTypeManager
       ->getStorage('taxonomy_term')
       ->loadTree($vid);
     foreach ($terms as $term) {
@@ -287,7 +287,7 @@ class DataRestApi extends ResourceBase {
    */
   public function patch($data) {
 
-    return new ResourceResponse('Patch not fully realised. $data=' . print_r($data,true), 400);
+    return new ResourceResponse('Patch not fully realised. $data=' . print_r($data, TRUE), 400);
 
   }
 
