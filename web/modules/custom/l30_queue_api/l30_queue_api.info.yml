@@ -1,0 +1,10 @@
+name: Lab30 Queue Api test l30
+description: Demonstrates queue api QworkerAPI and BatchAPI
+package: Custom
+type: module
+core_version_requirement: ^8.8.0 || ^9 || ^10
+dependencies:
+  - drupal:queue_ui
+#Qworker from
+#https://github.com/LoriqueNET/drupal9-code-examples/tree/master/web/modules/custom/queue_worker_examples
+#
