@@ -45,7 +45,7 @@ process:
       method: process
       source: tags
     - plugin: explode
-      delimiter: '|'
+      delimiter: ','
     - plugin: callback
       callable: trim
     - plugin: entity_generate
